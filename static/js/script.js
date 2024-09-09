@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+    
     const images = document.querySelectorAll('.gallery-container img');
 
     images.forEach(img => {
