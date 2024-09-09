@@ -1,0 +1,164 @@
+/* static/css/style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/twin-bg.png');
+    background-size: cover; /* Ensures the image covers the entire background */
+     /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #777;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: rgba(204, 0, 255, 0.021); /* Dark background with slight transparency */
+    color: #fff; /* White text */
+    padding: 15px 0; /* Add padding */
+    text-align: center; /* Center the links */
+    position: fixed; /* Fixes the navbar to the top */
+    width: 100%; /* Full width */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it's on top of other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline; /* Make list items horizontal */
+    margin: 0 20px; /* Space between items */
+}
+
+nav a {
+    color: #fff; /* White links */
+    text-decoration: none; /* Remove underlines */
+    padding: 5px; /* Add padding to make links larger */
+    font-size: 20px; /* Increase text size */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Individual glow effects for each link */
+nav a:nth-child(1):hover {
+    box-shadow: 0 0 15px rgba(38, 132, 255, 0.7); /* Red glow for Home */
+    color: #ffffff;
+}
+
+
+footer {
+    position: fixed; /* Fixes the navbar to the top */
+    width: 100%; /* Makes sure it spans the full width of the page */
+    bottom: 0; /* Position at the top of the viewport */
+    left: 0;
+    text-align: center;
+    z-index: 1000;
+    padding: 20px 0;
+    margin-top: 30px; /* Add some space above the footer */
+    background-color: #8100a821;
+}
+
+.glow-button {
+    /* Button Appearance */
+    background-color: #44444400; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px; /* Slightly rounded corners */
+  
+    /* Glow Effect */
+ /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .glow-button:hover {
+    box-shadow: 0 0 30px rgb(255, 255, 255); /* Brighter glow on hover */
+  }
+
+/* Base styles for the skills list */
+
+
+/* Gallery Styles */
+#gallery {
+    text-align: center; /* Center the gallery content */
+    margin-bottom: 30px; /* Add some space below the gallery */
+}
+
+#gallery h2 {
+    margin-bottom: 20px; /* Adjust spacing between the heading and images */
+}
+
+.gallery-container {
+    display: flex; /* Use flexbox for easy layout control */
+    flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
+    justify-content: center; /* Center the images horizontally */
+}
+
+.gallery-container img {
+    width: 300px; /* Set a fixed width for the images */
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure the image covers the container, maintaining aspect ratio */
+    margin: 10px; /* Add some space between the images */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    cursor: pointer; /* Indicate that the image is clickable */
+}
