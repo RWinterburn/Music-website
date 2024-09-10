@@ -39,11 +39,18 @@ section {
 }
 
 h2 {
-    border-bottom: 2px solid #333;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
     padding-bottom: 10px;
     margin-bottom: 10px;
     font-size: 1.8em;
     text-align: center;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
+}
+
+h2:hover {
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.8);
+    color: #ffffff;
 }
 
 ul {
@@ -55,37 +62,74 @@ li {
     margin-bottom: 10px;
 }
 
+/* Default styling for the navbar */
 nav {
-    background-color: rgba(204, 0, 255, 0.021); /* Dark background with slight transparency */
-    color: #fff; /* White text */
-    padding: 15px 0; /* Add padding */
-    text-align: center; /* Center the links */
-    position: fixed; /* Fixes the navbar to the top */
-    width: 100%; /* Full width */
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Ensures it's on top of other elements */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a5009700;
+    padding: 10px;
 }
 
-nav ul {
-    list-style: none; /* Remove bullet points */
-    margin: 0;
-    padding: 0;
+.nav-links {
+    display: flex;
+    list-style: none;
 }
 
-nav li {
-    display: inline; /* Make list items horizontal */
-    margin: 0 20px; /* Space between items */
+.nav-links li {
+    margin-left: 20px;
 }
 
-nav a {
-    color: #fff; /* White links */
-    text-decoration: none; /* Remove underlines */
-    padding: 5px; /* Add padding to make links larger */
-    font-size: 20px; /* Increase text size */
-    transition: all 0.3s ease; /* Smooth transition */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
+
+.nav-links a:hover {
+    background-color: #ae09bd;
+}
+
+/* Styling for burger menu */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #6d008f94;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+}
+
 
 /* Individual glow effects for each link */
 nav a:nth-child(1):hover {
@@ -137,7 +181,11 @@ footer {
     text-align: center; /* Center the gallery content */
     margin-bottom: 30px; /* Add some space below the gallery */
 }
-
+#gallery-section {
+    padding: 20px;
+    margin-bottom: 40px;
+    clear: both;
+}
 #gallery h2 {
     margin-bottom: 20px; /* Adjust spacing between the heading and images */
 }
@@ -159,6 +207,64 @@ footer {
 }
 
 .gallery-container img:hover {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    transform: scale(3); /* Slightly enlarge the image on hover */
     cursor: pointer; /* Indicate that the image is clickable */
+}
+
+.shows-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.shows-container img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shows-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#prev-shows h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#video-gallery {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 560;
+    max-width: 560px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container iframe:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#video-gallery h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }

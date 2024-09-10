@@ -24,10 +24,10 @@ def videos():
     data = software()
     return render_template('videos.html', **data)
 
-@app.route('/merch')
-def merch():
+@app.route('/press')
+def press():
     data = software()
-    return render_template('merch.html', **data)
+    return render_template('press.html', **data)
 
 
 @app.route('/shows')

@@ -38,7 +38,7 @@ def software():
 
 
         # Education section
-        'merch': [
+        'press': [
         {'degree': 'Animation, Scriptwriting, Pre-production, Post-production, Audio production, Broadcasting, Radio production', 
          'institution': 'Craven College', 'year': '2014',
          'details': 'Writing for television and video, factual programme production techniques for television, music video production, advertisement production for television social action and community media production, presentation techniques for broadcasting, broadcasting music-based programming, pre production techniques for the creative media industries, Communication skills for creative media production, Research techniques for the creative media industries, Creative media production management project, Working to a brief in the creative media industries, Critical approaches to creative media products, Understanding the creative media sector, Understanding the television and film industries, Film and video editing techniques, Audio production processes and techniques, Single camera techniques, Multi camera techniques, Animation techniques'},

@@ -1,37 +1,26 @@
-<!-- templates/base.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Music{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="{{ url_for('index') }}" class="glow-button">Home</a></li>
-            <li><a href="{{ url_for('music') }}"class="glow-button">Music</a></li>
-            <li><a href="{{ url_for('videos') }}"class="glow-button">Videos</a></li>
-            <li><a href="{{ url_for('merch') }}"class="glow-button">Merch</a></li>
-            <li><a href="{{ url_for('shows') }}"class="glow-button">Live Shows</a></li>
-            <li><a href="{{ url_for('gallery') }}"class="glow-button">Gallery</a></li>
-            <li><a href="{{ url_for('contact') }}"class="glow-button">Contact</a></li>
-        </ul>
-    </nav>
+{% extends 'base.html' %}
 
-
-    <div class="container">
+        {% block title %}Gallery{% endblock %}
+        
         {% block content %}
-        <!-- Content will be inserted here -->
-        {% endblock %}
-    </div>
-    
-    <footer>
-        <p>&copy; 2023 Robert Winterburn</p> 
-    </footer>
+                <section id="prev-shows" style="margin-top: 10%;">
+                    <h2>Previous Live shows</h2>
+                    <div class="shows-container">
+                        <img src="static/imgs/imgshow/barnsley12617.jpg" alt="Image description">
+                        <img src="static/imgs/imgshow/drop.jpg" alt="Image description">
+                        <img src="static/imgs/imgshow/fma.jpg" alt="Image description">
+                        <img src="static/imgs/imgshow/fma2.jpg" alt="Image description">
+                        <img src="static/imgs/imgshow/givegig.jpg" alt="Image description">
+                        <img src="static/imgs/imgshow/glistenbury.jpg" alt="Image description">
+                        <img src="static/imgs/imgshow/live.jpg" alt="Image description">
+                        <img src="static/imgs/imgshow/mm.jpg" alt="Image description">
+                        <img src="static/imgs/imgshow/oakworth.jpg" alt="Image description">
+                        <img src="static/imgs/imgshow/santiagos.jpg" alt="Image description">
+                        <img src="static/imgs/imgshow/shipsgigs.jpg" alt="Image description">
+                        <img src="static/imgs/imgshow/squarechapel.jpg" alt="Image description">
+                        <img src="static/imgs/imgshow/unity.jpg" alt="Image description">
+                        <img src="static/imgs/imgshow/venue21116.jpg" alt="Image description">
+                    </div>
+                </section>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    
-</body>
-</html>
+        {% endblock %}

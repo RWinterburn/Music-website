@@ -1,4 +1,3 @@
-<!-- templates/base.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +8,21 @@
 </head>
 <body>
     <nav>
-        <ul>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
             <li><a href="{{ url_for('index') }}" class="glow-button">Home</a></li>
             <li><a href="{{ url_for('music') }}"class="glow-button">Music</a></li>
             <li><a href="{{ url_for('videos') }}"class="glow-button">Videos</a></li>
-            <li><a href="{{ url_for('merch') }}"class="glow-button">Merch</a></li>
+            <li><a href="{{ url_for('press') }}"class="glow-button">Press and Stuff</a></li>
             <li><a href="{{ url_for('shows') }}"class="glow-button">Live Shows</a></li>
             <li><a href="{{ url_for('gallery') }}"class="glow-button">Gallery</a></li>
             <li><a href="{{ url_for('contact') }}"class="glow-button">Contact</a></li>
         </ul>
     </nav>
-
 
     <div class="container">
         {% block content %}

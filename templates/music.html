@@ -1,37 +1,13 @@
-<!-- templates/base.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Music{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="{{ url_for('index') }}" class="glow-button">Home</a></li>
-            <li><a href="{{ url_for('music') }}"class="glow-button">Music</a></li>
-            <li><a href="{{ url_for('videos') }}"class="glow-button">Videos</a></li>
-            <li><a href="{{ url_for('merch') }}"class="glow-button">Merch</a></li>
-            <li><a href="{{ url_for('shows') }}"class="glow-button">Live Shows</a></li>
-            <li><a href="{{ url_for('gallery') }}"class="glow-button">Gallery</a></li>
-            <li><a href="{{ url_for('contact') }}"class="glow-button">Contact</a></li>
-        </ul>
-    </nav>
+{% extends 'base.html' %}
 
+{% block title %}Music{% endblock %}
 
-    <div class="container">
-        {% block content %}
-        <!-- Content will be inserted here -->
-        {% endblock %}
-    </div>
-    
-    <footer>
-        <p>&copy; 2023 Robert Winterburn</p> 
-    </footer>
+{% block content %}
+    <section id="music-section" style="margin-top: 10%;">
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    
-</body>
-</html>
+        <div class="music-container">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/5JfxgNnegRJKc1M9PGI8pF?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </section>
+{% endblock %}
+
